@@ -16,14 +16,28 @@ module.exports = {
     ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
-  ga: 'UA-119945815-1',
+  plugins: [
+    [
+      'vuepress-plugin-mathjax',
+      {
+        target: 'svg',
+        macros: {
+          '*': '\\times'
+        }
+      }
+    ],
+    [
+      'latex' // or 'vuepress-plugin-latex'
+    ]
+  ],
+  ga: 'UA-134712641-1',
   serviceWorker: true,
   updatePopup: true,
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: '静晴轩别苑',
-      description: '繁华尽处，寻一无人山谷，建一木制小屋，铺一青石小路，与你晨钟暮鼓，安之若素。',
+      title: '何巨杰的博客',
+      description: 'Time waits for no one.',
       serviceWorker: {
         updatePopup: {
           message: '🎉 发现新内容可用 ✏️',
