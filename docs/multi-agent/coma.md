@@ -11,7 +11,7 @@ meta:
 
 ## Key Challenges
 
-dsfdsfdsf 在 Mulit-agent 设置下，会存在如下的三个挑战：
+在 Mulit-agent 设置下，会存在如下的三个挑战：
 
 - Modelling other agents' information： 在 multi-agent 的设置下，过去常用的 independent actor-critic 等模型，往往会由于独立训练，导致信息共享不足，从而 coordinated 效果比较差。
 - Multi-agent credit assignment：常规的 actor-critic 方法由于每个 actor 训练的 reward 都是基于全局的 reward，所以很难评估每个 agent 采取的 action 实际对全局的 reward 影响有多大，故而导致优化存在困难。
